@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格的学习</title>
+    <style>
+        table {
+            width: 100%;
+            /* 边框的折叠方式，默认为separate分开的 collapse折叠的 */
+            border-collapse: collapse;
+        }
+
+        table caption {
+            font-size: 2em;
+            font-weight: bold;
+            background-color: brown;
+        }
+
+        tr th,
+        tr td {
+            border: 1px solid #000;
+            padding: 20px 0;
+        }
+
+        tr td {
+            text-align: center;
+        }
+
+        thead tr th {
+            background-color: #008c8c;
+            color: #fff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #eee;
+        }
+
+        tbody tr:hover {
+            background-color: #ddd;
+        }
+
+        tbody tr td:first-child {
+            color: blueviolet;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 表格有tabel caption thead tbody tfoot tr th td 元素组成  -->
+    <table>
+
+        <caption>这是一个表格</caption>
+
+        <thead>
+            <tr>
+                <th>数据1</th>
+                <th>数据2</th>
+                <th>数据3</th>
+                <th>数据4</th>
+                <th>数据5</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <!-- 单元行的合并：rowspan -->
+                <td rowspan="2">zhishi1</td>
+                <td>zhishi2</td>
+                <td>zhishi3</td>
+                <td>zhishi4</td>
+                <td>zhishi5</td>
+            </tr>
+            <tr>
+                <td style="display: none;"></td>
+                <td>zhishi2</td>
+                <td>zhishi3</td>
+                <td>zhishi4</td>
+                <td>zhishi5</td>
+            </tr>
+            <tr>
+                <td>zhishi1</td>
+                <td>zhishi2</td>
+                <td>zhishi3</td>
+                <td>zhishi4</td>
+                <td>zhishi5</td>
+            </tr>
+            <tr>
+                <td>zhishi1</td>
+                <td>zhishi2</td>
+                <td>zhishi3</td>
+                <td>zhishi4</td>
+                <td>zhishi5</td>
+            </tr>
+            <tr>
+                <td>zhishi1</td>
+                <td>zhishi2</td>
+                <td>zhishi3</td>
+                <td>zhishi4</td>
+                <td>zhishi5</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <!-- 单元格的合并：列合并用colspan -->
+                <td colspan="5">合计：****</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

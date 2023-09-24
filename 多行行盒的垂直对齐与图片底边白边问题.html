@@ -1,0 +1,57 @@
+<!-- 多行行盒垂直居中用vertical-align属性 这个属性有很多属性值 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        .contain {
+            height: 100px;
+            border: 2px solid;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <i class="iconfont icon-cuowutishitianchong"></i>
+        <span>nihaoya </span>
+    </div>
+</body>
+
+</html> -->
+<!-- 
+图片底边白边：图片的父元素如果是块盒，则当高度为auto时 子元素为图片 图片底部和块盒底边有空白
+
+解决方法：
+1、将font-size设置为0；（font-size越大底边越大）
+2、将图片变成块盒（行块盒都不行） -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: red;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./u=3294831775,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp" alt=""
+            style="width: 100%;">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+.reg-main {
+    line-height: 1.5;
+    width: 1200px;
+    margin: 30px auto;
+}
+
+.reg-main .reg-header {
+    border-bottom: 1px solid #999;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 27px;
+    box-sizing: border-box;
+}
+
+.reg-main .reg-header h2 {
+    font-size: 38px;
+    width: 120px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.reg-main .reg-form {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.reg-main .reg-form .form-item {
+    height: 40px;
+    margin: 50px 0;
+    position: relative;
+}
+
+.reg-main .reg-form .form-item .select,
+.reg-main .reg-form .form-item .input {
+    float: left;
+}
+
+
+.reg-main .reg-form .form-item .select {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-right: none;
+    box-sizing: border-box;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.reg-main .reg-form .form-item .select .select-titel {
+    line-height: 40px;
+    text-indent: 2em;
+    font-weight: bold;
+    color: #00a1d6;
+    cursor: pointer;
+}
+
+.reg-main .reg-form .form-item .select .select-item {
+    width: 300px;
+    max-height: 250px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.reg-main .reg-form .form-item .select select {
+    display: none;
+}
+
+.reg-main .reg-form .form-item .select:hover>.select-item {
+    display: block;
+}
+
+.reg-main .reg-form .form-item .select .select-item ul li {
+    margin: 10px 0;
+    height: 36px;
+    font-size: 12px;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 36px;
+}
+
+
+.reg-main .reg-form .form-item .select .select-item ul li.selected {
+    color: #00a1d6;
+}
+
+.reg-main .reg-form .form-item .select .select-item ul li:hover {
+    background-color: #f5f7fa;
+}
+
+.reg-main .reg-form .form-item .input input {
+    width: 500px;
+    height: 40px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.reg-main .reg-form .reg-mail {
+    text-align: right;
+    margin: -37px 0;
+}
+
+
+.reg-main .reg-form .form-item .reg-talnt {
+    position: relative;
+}
+
+.reg-main .reg-form .form-item .reg-ntcont {
+    width: 300px;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+
+.reg-main .reg-form .readme label span {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+
+.reg-main .reg-form .readme label input:checked+span {
+    border-color: #008c8c;
+}
+
+.reg-main .reg-form .readme label input:checked+span::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    background-color: #008c8c;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.reg-main .reg-form .readme label input {
+    display: none;
+}
+
+.reg-main .reg-form .log {
+    text-align: right;
+    margin: -37px 0;
+}
+
+.reg-main .reg-form .form-item .error {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    color: red;
+    font-size: 12px;
+    display: none;
+    /* 默认隐藏 给父元素通过js控制一个错误样式 有错误样式控制error显示 */
+}
+
+.reg-main .reg-form .form-item.haserror .error {
+    display: block;
+}
+
+.reg-main .reg-form .form-item.haserror input {
+    border-color: red;
+}
+
+/* 统一样式 */
+input[type="text"],
+input[type="password"] {
+    border: 1px solid #ccc;
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-indent: 1em;
+    font-size: 14px;
+    color: #606266;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    border-color: #999;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ccc;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #00a1d6;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background-color: #00a1d6;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+a {
+    color: #00a1d6;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button:disabled {
+    background-color: #606266;
+    color: #999;
+    cursor: not-allowed;
+}

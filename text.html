@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入你的账号">
+    <input type="password" placeholder="请输入你的密码">
+    <input type="number" max="100" min="0" step="10">
+    <input type="file">
+    <input type="range" max="5" min="0" step="1">
+    爱好：
+    <!-- 将input写在label内 则为隐式关系 不需要for id -->
+    <label name="sing">唱歌<input type="checkbox"></label>
+    <label name="swim">游泳<input type="checkbox" checked></label>
+    <label for="dance">跳舞</label><input type="checkbox" id="dance">
+    <!-- 单选框 要注意设置name值 -->
+    性别<label><input type="radio" name="sex">男</label><input type="radio" id="femail" name="sex">
+    <label for="femail">女</label>
+    <input type="date">
+    <input type="search">
+    <input type="submit">
+    <input type="reset">
+    <input type="button" value="s">
+
+    请选择城市：<select>
+        <option>成都</option>
+        <option selected>哈尔滨</option>
+        <option>杭州</option>
+        <option>背景</option>
+    </select>
+    请选择你最喜欢的主播：
+    <select>
+        <optgroup label="才艺主播">
+            <option>小团团</option>
+            <option>周淑怡</option>
+        </optgroup>
+        <optgroup label="游戏主播">
+            <option>otto</option>
+            <option>doinb</option>
+        </optgroup>
+        <option selected></option>
+    </select>
+    <select multiple>
+        <optgroup label="才艺主播">
+            <option>小团团</option>
+            <option>周淑怡</option>
+        </optgroup>
+        <optgroup label="游戏主播">
+            <option>otto</option>
+            <option>doinb</option>
+        </optgroup>
+        <option selected></option>
+    </select>
+    <textarea name="" id="" cols="30" rows="10" placeholder="请输入简介"></textarea>
+
+    <button type="button">按钮</button>
+
+    <!-- 对比button和input区别 -->
+    <!-- input:image是图片按钮 -->
+    <input type="image" src="./u=3294831775,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp">
+    <button>
+        <img src="./u=3294831775,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp" alt=""
+            style="width: 100px" ;>
+        <p>Lorem, ipsum.</p>
+    </button>
+
+    <input type="text" list="userAgent">
+    <datalist id="userAgent">
+        <option value="safari">苹果浏览器</option>
+        <option value="fire fox">火狐浏览器</option>
+        <option value="chrome">谷歌浏览器</option>
+        <option value="IE">IE浏览器</option>
+    </datalist>
+
+    <form action="http://www.baidu.com" method="get">
+        用户账号：
+        <input type="text" name="username" id="">
+        用户密码：
+        <input type="password" name="userpassword" id="">
+        城市：
+        <select name="city" id="">
+            <optgroup>
+                <option value="1">重庆</option>
+                <option value="2">长沙</option>
+                <option value="3">杭州</option>
+            </optgroup>
+        </select>
+        <textarea name="synopsis" id="" cols="30" rows="10" placeholder="请输入简介"></textarea>
+        <button type="submit">提交</button>
+    </form>
+    <form action="http://www.baidu.com" method="get">
+        修改信息：
+        <fieldset>
+            <legend>账户信息：</legend>
+            用户账号：
+            <input type="text" name="username" id="" disabled value="abc">
+            用户密码：
+            <input type="password" name="userpassword" id="" readonly value="111">
+        </fieldset>
+        <fieldset>
+            <legend>个人信息：</legend>
+            性别：
+            <label for="mail1">男</label>
+            <input type="radio" name="gender" id="mail1">
+            <label for="femail1">女</label>
+            <input type="radio" name="gender" id="femail1">
+            <!-- <label> <input type="radio" name="gender" id="">男</label>
+            <label> <input type="radio" name="gender" id="">女</label> -->
+
+            城市：
+            <select name="city" id="">
+                <optgroup label="一级城市">
+                    <option value="1">重庆</option>
+                    <option value="2">长沙</option>
+                    <option value="3">杭州</option>
+                </optgroup>
+            </select>
+            <textarea name="synopsis" id="" cols="30" rows="10" placeholder="请输入简介"></textarea>
+        </fieldset>
+        <button type="submit">提交</button>
+    </form>
+</body>
+
+</html>

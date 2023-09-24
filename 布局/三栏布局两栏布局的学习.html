@@ -1,0 +1,153 @@
+<!--三栏布局：思路2个浮动左右 一个bfc避开浮动 
+伪等高就是通过设置height很大 margin-bottom使得height很小 然后容器超出隐藏
+缺点aside（侧边栏）写在主元素前面 不利于seo
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局</title>
+    <style>
+        .main {
+            width: 90%;
+            margin: 0 auto;
+            background-color: lightblue;
+            /* 这里外容器变成bfc所以计算浮动元素的高度 不用去浮动 */
+            overflow: hidden;
+        }
+
+        .aside {
+            float: left;
+            width: 30%;
+            background-color: #008c8c;
+            margin-right: 20px;
+            height: 10000px;
+            margin-bottom: -9990px;
+        }
+
+        .aside1 {
+            float: right;
+            width: 30%;
+            background-color: #008c8c;
+            height: 10000px;
+            margin-bottom: -9990px;
+
+        .container {
+            overflow: hidden;
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <aside class="aside">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corrupti veniam nobis
+            officiis reprehenderit, explicabo accusamus aspernatur ex porro iste. Facilis architecto fuga similique
+            repellendus aut quo aliquam. Aliquam, ab?</aside>
+        <aside class="aside1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis corrupti veniam nobis
+            officiis reprehenderit, explicabo accusamus aspernatur ex porro iste. Facilis architecto fuga similique
+            repellendus aut quo aliquam. Aliquam, ab?</aside>
+
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore saepe veritatis
+            consectetur reiciendis, soluta voluptates magni repudiandae reprehenderit corporis deserunt, consequatur
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestiae distinctio inventore deleniti et
+            dolorum rerum, quas unde praesentium velit. Nesciunt minus quam, iste nostrum, placeat numquam aspernatur
+            debitis et cum ipsum perferendis doloremque cupiditate sunt! Animi quidem dolore, nihil sint optio enim a
+            ipsa quam omnis vitae. Itaque quaerat praesentium illo. Temporibus debitis maiores aliquam a numquam modi
+            nemo fugit ducimus explicabo quas! Vel, neque. Quaerat debitis distinctio nostrum error repellat, cum
+            reprehenderit sint beatae laudantium iure, officiis voluptatibus amet rem ipsam! Quibusdam exercitationem
+            iste accusamus perspiciatis. Deleniti praesentium soluta dolorem similique tenetur eos vel quia odit fuga
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias quam saepe corporis minima omnis similique
+            exercitationem? Dolor cumque, et eius voluptas architecto distinctio aspernatur perspiciatis nemo
+            necessitatibus voluptatem incidunt cum beatae libero possimus aut mollitia fugit laboriosam reprehenderit
+            sunt dolore nihil ipsum? Id nam maiores blanditiis voluptatum itaque reiciendis incidunt, earum assumenda
+            eveniet voluptate? Nemo corporis corrupti aliquam inventore dignissimos reiciendis perferendis? Autem
+            accusamus quis vero ullam repudiandae commodi reprehenderit esse dicta quae necessitatibus? Suscipit quam
+            earum repudiandae illum corrupti alias quis vitae voluptas ipsum iusto assumenda enim facilis quos
+            blanditiis, iste quasi corporis laborum officia, nulla maiores, itaque harum. Ipsum voluptas, dolore porro
+            aliquam ex debitis perspiciatis autem eius at odio pariatur facilis sit aut, explicabo, dolorem molestiae!
+            Dolorem, saepe omnis adipisci facere doloribus unde officia voluptatum quasi non velit perferendis cum ex
+            iusto laborum sed odio soluta eum, ratione nihil ase fugit laboriosam! Veritatis autem dicta
+            modi consequuntur numquam.
+            unde doloribus repellat labore? Officiis vel culpa possimus eos?</div>
+
+    </div>
+</body>
+
+</html> -->
+
+<!-- 三栏布局 主元素在前 思路 固定margin左右的宽度 将侧边栏通过定位来固定
+缺点 固定元素脱离常规流不知道侧边栏的高度 优点有利于seo -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三栏布局 内容在前</title>
+    <style>
+        .main {
+            background-color: lightblue;
+            width: 90%;
+            border: 2px solid;
+            padding: 30px;
+            padding-bottom: 0;
+            margin: 0 auto;
+            position: relative;
+            min-width: 800px;
+            overflow: hidden;
+        }
+
+        .container {
+            margin: 0 300px;
+            background-color: #008c8c;
+        }
+
+        .asideleft {
+            position: absolute;
+            width: 300px;
+            left: 30px;
+            top: 30px;
+            background-color: blueviolet;
+            height: 10000px;
+            margin-bottom: -9990px;
+        }
+
+        .asideright {
+            position: absolute;
+            width: 300px;
+            right: 30px;
+            top: 30px;
+            background-color: rgb(22, 248, 14);
+            height: 10000px;
+            margin-bottom: -9990px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, saepe corporis
+            praesentium pariatur doloremque quam, commodi atque ducimus soluta earum illum distinctio quibusdam nesciunt
+            eveniet voluptatibus rem maxime voluptates iusto animi minus? Excepturi aspernatur earum nihil odio pariatur
+            tenetur consequuntur minima, dolorum accusamus quibusdam! Deserunt odio laborum, deleniti est facere quas
+            quis officiis aliquid quos. Expedita molestias suscipit earum ad pariatur temporibus nam ducimus consectetur
+            eius in impedit, iusto sit id! Velit asperiores et alias facilis harum nam est illo nobis iure sint, ad
+            quidem possimus molestias laboriosam deleniti nulla itaque libero, veritatis saepe doloremque! Nesciunt
+            commodi a repellat accusamus!</div>
+        <aside class="asideleft">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quia aspernatur
+            beatae nesciunt ea qui vero officia provident tempora iure, eum quas quam assumenda velit veniam nisi.
+            Doloremque, cumque praesentium.</aside>
+        <aside class="asideright">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium aliquam
+            veniam optio, doloribus expedita dignissimos dicta libero et illum esse eos eligendi velit voluptatem
+            maiores error nulla! Veritatis, voluptatibus.</aside>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/test.css">
+</head>
+
+<body>
+    <!-- h$*6>{$级标题}  $自然增长 *几个 >子内容 {}普通内容-->
+    <h1>1级标题</h1>
+    <h2>2级标题</h2>
+    <h3>3级标题</h3>
+    <h4>4级标题</h4>
+    <h5>5级标题</h5>
+    <h6>6级标题</h6>
+
+    <!-- lorem 乱数假文 用于排版测试文字 -->
+    <!-- p*3>lorem 不加大括号 -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos maxime quam inventore excepturi magni sequi
+        quis quia natus veniam, aliquam ullam iste aliquid impedit sapiente ipsam nisi voluptatem omnis?</p>
+    <p>Molestiae accusantium quas optio repudiandae veniam, provident tempora nemo voluptatem aperiam! Vero, tempora
+        fugit illo rerum iusto ipsam delectus sunt sint ratione illum modi expedita reiciendis repudiandae eaque
+        dignissimos possimus.</p>
+    <p>Illo ut atque pariatur harum, odio nemo sapiente quibusdam neque voluptatem. Officiis ipsam voluptatum
+        voluptatibus cumque incidunt. Eligendi ullam alias odio quam, voluptatibus itaque temporibus, praesentium nemo
+        vel ea mollitia.</p>
+
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora earum perferendis accusantium suscipit
+        quibusdam non explicabo rem iure vitae a. Obcaecati, explicabo tenetur voluptatem cupiditate possimus veritatis
+        corporis quod porro.</span>
+    <!-- pre 元素 不会进行空白折叠 空白折叠就是对源代码中的连续空白（换行回车制表）进行压缩为一个空白 -->
+    <!-- pre 显示源代码格式 css样式为 white-space=pre-->
+    <!-- code显示代码的元素 -->
+    <code style="white-space: pre;">
+        <!-- <pre> -->
+
+            sadk
+            safd
+        
+        <!-- </pre> -->
+    </code>
+
+    <!-- 实体字符 html entity -->
+    <!-- 小于 &lt; -->
+
+    <!-- 大于 &gt;-->
+
+    <!-- 空格 &nbsp-->
+
+    <!-- © 版权 &copy; -->
+
+    <!-- & and &amp; -->
+    在页面中显示段落用&lt;p&gt;&copy;&amp;
+
+    <!-- 目录 -->
+    <!-- a*3>{章节$} a元素可 锚点(地址都会变但是不刷新页面） 跳转 还有功能性链接（js、mailto、tel） -->
+    <!-- <a href="tel:100">sdg</a>
+    <a href="mailto:24124234@qq.com">f</a>
+    <a href="javascript:">fd </a> -->
+    <!-- a[href="#chapter$"]*4>{章节$} -->
+    <!-- <a href="#chapter1">章节1</a>
+    <a href="#chapter2">章节2</a>
+    <a href="#chapter3">章节3</a>
+    <a href="#chapter4">章节4</a> -->
+    <a href="">章节1</a>
+    <a href="#chapter2">章节2</a>
+    <a href="">章节3</a>
+
+    <!-- ((h2>{章节$})+p>lorem)*3 括号代表一个整体 >代表内容 +代表兄弟元素 -->
+    <!-- ((h2[id="chapter$"]>{章节$})+p>lorem100)*4 大括号为内容 中括号为属性-->
+    <!-- <h2 id="chapter1">章节1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, quis enim? Veniam ipsam ea deleniti, maiores recusandae aspernatur, necessitatibus voluptas delectus architecto, suscipit voluptate impedit aliquid? Aspernatur odio vel soluta porro minus magnam repudiandae est neque, incidunt placeat consequuntur asperiores omnis enim molestiae distinctio minima saepe eligendi eos, excepturi delectus voluptas cum sed in! Neque, id modi, pariatur vitae, praesentium unde nihil est numquam quasi porro deleniti dolores? Dolor optio neque unde voluptas accusamus magnam, provident quisquam mollitia illum a aut officiis quidem quos rem eligendi aliquam, asperiores in sunt libero beatae! Iusto ut fuga, vero eligendi quae vel repellendus.</p>
+    <h2 id="chapter2">章节2</h2>
+    <p>Consequuntur molestiae accusantium adipisci quia quo voluptates sapiente necessitatibus nemo expedita. Dicta, maxime quisquam pariatur facilis deleniti sit dolor amet cumque rem omnis hic eius, tenetur mollitia eum earum dolore voluptate voluptas, exercitationem officia laudantium? Unde rem quas, non suscipit illum ad nam, quia quos ex sunt laudantium, accusantium pariatur eveniet? Rerum, perspiciatis! Excepturi, culpa est! Nisi voluptate quae amet commodi vitae quisquam dolor veniam! Fugiat, reiciendis consequuntur architecto illum inventore deserunt hic sit id illo magni, maiores saepe reprehenderit, blanditiis sed repudiandae ratione culpa. Vero earum ipsum distinctio debitis officia doloremque quia ipsa, rerum praesentium aperiam, unde nam sed.</p>
+    <h2 id="chapter3">章节3</h2>
+    <p>Ad vel explicabo ea nobis voluptatem, repellat officia, voluptatibus doloribus veritatis magni animi. Pariatur eius sed adipisci nemo voluptatem iure dolor neque sapiente minima laboriosam tenetur aspernatur dicta illum recusandae debitis quos cum maiores fugiat, quia placeat quibusdam fugit obcaecati delectus ex! Natus repudiandae, veritatis, dolore ipsum praesentium dolorem voluptas ad non esse expedita, alias omnis nam adipisci laboriosam nisi! Velit, deleniti voluptatibus unde repudiandae provident rem sint perspiciatis corporis laudantium facilis eum sapiente officiis. Praesentium alias sunt placeat repudiandae neque ut iusto corrupti? Nihil animi incidunt perspiciatis, praesentium voluptatibus placeat eius vitae dignissimos quasi iure inventore eveniet nostrum perferendis.</p>
+    <h2 id="chapter4">章节4</h2> -->
+    <p>Hic eius necessitatibus quas? Reprehenderit quidem similique voluptatem perferendis tempora voluptatum. Nihil,
+        cupiditate doloremque. Expedita non, ut rem voluptate dolores maxime harum? Sint, harum. Illo ratione, commodi
+        amet perferendis sit unde. Iste in eaque beatae ex dolore facilis excepturi sit minima earum sunt, harum
+        distinctio sapiente eveniet. Porro ratione adipisci, dolorem perferendis quas quia at id quod ipsum recusandae,
+        veritatis harum officia, quae architecto assumenda! Veniam doloremque aut inventore est suscipit accusantium
+        assumenda eaque illum dolorum ullam, nemo molestiae ea tenetur nam similique non, a perspiciatis consequuntur,
+        dignissimos quibusdam modi nostrum quos? Necessitatibus tempora, et sed beatae optio est perferendis?</p>
+    <h2>章节1</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi veniam deleniti numquam nostrum expedita
+        natus soluta necessitatibus voluptatem incidunt repudiandae, rem consequuntur delectus et doloribus repellendus
+        voluptates non quisquam enim.</p>
+    <h2 id="chapter2">章节</h2>
+    <p>Voluptatibus minima iure commodi, perspiciatis ipsum repudiandae magnam alias dolorum et, debitis eum similique
+        rerum nemo illum ea aliquid libero? Deserunt veniam animi aperiam alias sit doloremque commodi, sunt enim.</p>
+    <h2>章节3</h2>
+    <p>Animi sed soluta sit at, laborum a eum temporibus deleniti, perferendis fugiat cupiditate eligendi incidunt!
+        Odio, quae accusantium saepe consequuntur hic dignissimos distinctio aperiam nisi deserunt, suscipit unde. At,
+        nisi.</p>
+
+    <!-- 锚链接#直接回到顶部 浏览器规则 -->
+    <a href="#">回到顶部</a>
+
+    <!-- a属性 target属性：打开窗口 属性取值：_self 当前窗口 _blank 新窗口 -->
+    <a href="https://www.douyu.com" target="_blank" title="斗鱼，每个人的直播平台">斗鱼直播</a>
+
+
+    <!-- 地址 绝对路径 相对路径 站外资源 站内资源 站外用绝对路径 站内用绝对或相对  -->
+    <!-- 相对路径 ./开头 ../返回上一级 ./可省略 -->
+    <a href=""></a>
+    <!-- 绝对路径 协议名（file http https） ：//主机名（域名、ip）：端口/路径 相同协议名时候可省略协议名-->
+
+    <!-- img image缩写 属性：src alt 配合元素 a、figure、map(area)使用 -->
+    <!-- <img src="http://n.sinaimg.cn/sinakd20220824s/156/w600h356/20220824/55c6-05945a244e42c1f9fc37b40c22656664.jpg" alt="这是太阳系图"> -->
+    <a href="http://finance.sina.com.cn/tech/roll/2022-08-24/doc-imizmscv7544166.shtml" target="_blank"><img
+            src="http://n.sinaimg.cn/sinakd20220824s/156/w600h356/20220824/55c6-05945a244e42c1f9fc37b40c22656664.jpg"
+            alt="这是太阳系图"></a>
+    <img src="http://n.sinaimg.cn/sinakd20220824s/156/w600h356/20220824/55c6-05945a244e42c1f9fc37b40c22656664.jpg"
+        alt="这是太阳系图" usemap="#solarMap">
+    <map name="solarMap">
+        <!-- <area shape（形状:circle圆、rect矩形、poly多边形）="" coords（位置）="" href（跳转地址）="" alt=""> -->
+        <!-- <area shape="circle" coords="141,192,55 (圆心、半径）"
+            href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%B3%BB/173281" alt=""> -->
+        <area shape="circle" coords="141,192,55" href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%B3%BB/173281"
+            alt="">
+        <!-- <area shape="rect" coords="74,119,193,254（左上角坐标和右下角坐标）"
+            href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%B3%BB/173281" alt=""> -->
+        <!-- <area shape="poly" coords="74,119,193,254,250,444(每个点坐标)"
+            href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%B3%BB/173281" alt=""> -->
+    </map>
+    <!-- figure 符合html语义化 将图片和文字放figure一起 方便电脑知道含义 -->
+    <figure>
+        <img src="http://n.sinaimg.cn/sinakd20220824s/156/w600h356/20220824/55c6-05945a244e42c1f9fc37b40c22656664.jpg"
+            alt="这是一个太阳系图">
+        <figcaption>
+            <h2>太阳系</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt ratione aspernatur commodi quae
+                recusandae, ipsam labore debitis aperiam distinctio dolores quibusdam neque repellendus sit? Quos
+                inventore a exercitationem provident dicta.</p>
+        </figcaption>
+    </figure>
+
+    <!-- video audio的学习-多媒体 -->
+    <!-- video和audio的属性有:loop-自动播放;controls-播放控件；muted-静音播放；autoplay-自动播放 -->
+    <!-- controls：控制控件显示 只能取值controls 像这类属性 在HTML5 叫做布尔属性 不写或者取值本身 可不写属性值 -->
+    <video src="./../mda-madjt1deuj2r0n97.mp4" controls autoplay muted loop></video>
+    <!-- audio和video一样有那些布尔属性 -->
+    <audio src="./../obj_wo3DlMOGwrbDjj7DisKw_8937223526_6fc5_c88d_0969_8e5d43f28e30ac13e9ec60e3da828bd2.mp3" controls
+        autoplay muted loop></audio>
+    <!-- 兼容性 旧版本不兼容 视频格式一般为mp4、webm，所以要准备两个视频格式、或者flash -->
+    <video controls autoplay muted loop>
+        <!-- 浏览器看哪个有就哪个 -->
+        <source src="./../mda-madjt1deuj2r0n97.mp4">
+        <source src="./../mda-madjt1deuj2r0n97.webm">
+        <p>你的浏览器不兼容 下载最新。。。。</p>
+    </video>
+
+
+
+    <!-- 列表元素： 有序列表 无序列表 定义列表 -->
+    <!-- 有序列表：ol：ordered list ； li：list item 注意语义化 要知道不是前面有数字就要用ol而是本身有序（ol无需列表也可通过css加序号）-->
+    <ol>
+        <li>第1步</li>
+        <li>第2步</li>
+        <li>第3步</li>
+    </ol>
+    <!-- 无序列表：ul：unordered list ； li：list item 多用于新闻列表 与 菜单  -->
+    <ul>
+        <li>找对象</li>
+        <li>要好看</li>
+        <li>要有钱</li>
+    </ul>
+    <!-- 定义列表 通常用于术语定义 dl:definition list dt:definition title dd:definition description-->
+    <dl>
+        <dt>html</dt>
+        <dd>超文本标记语言</dd>
+        <dt>前端</dt>
+        <dd>*********</dd>
+    </dl>
+
+
+    <!-- 容器元素:该元素为一块区域 内部放其他元素 -->
+    <!-- div 无语义 html5之前经常使用 但是浏览器不理解里面是什么 在HTML5里讲究语义化 -->
+    <!-- 语义化容器元素:
+        header:通常用于表示页头，也可用于文章头部
+        footer：通常用于表示页尾，也可用于文章尾部
+        article：通常用于表示整篇文章
+        section：通常用于表示文章的章节
+        aside：通常用于侧边栏 即附加内容
+        当不确定用啥容器就用div 思路就是容器套容器 不断划分 多用语义化的容器 更有条理性 划分区域的好坏关系到css的样式-->
+    <header>
+        <!-- 网页页头 -->
+        <div>
+            <img src="" alt="">
+        </div>
+        <div>
+            <ul>
+                <li>Lorem.</li>
+                <li>Sint.</li>
+                <li>Fugiat?</li>
+            </ul>
+        </div>
+    </header>
+    <article>
+        <!-- 整篇文章 -->
+        <header>
+            <!-- 文章头 -->
+            <h1></h1>
+            <div></div>
+        </header>
+        <!-- 文章章节 -->
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci qui rerum veniam dicta fugit quo
+                temporibus. Nobis velit eum blanditiis consequatur voluptatem nemo praesentium? Libero aliquam
+                architecto rem nobis doloremque!</p>
+            <p>Ipsum, aperiam cum. Explicabo recusandae libero deserunt blanditiis, laudantium nisi animi. Perspiciatis
+                sint aut, fuga tempora, dicta quibusdam maxime a, omnis cum facilis nobis aliquam quod dolore. Minima,
+                reiciendis illum?</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus eum reprehenderit adipisci pariatur
+                ullam fugiat eveniet iure nisi accusantium saepe, dignissimos a, reiciendis cumque ipsam quo non. Ut,
+                voluptas nihil.</p>
+            <p>Obcaecati ducimus illum doloribus commodi, facere libero omnis enim voluptate dignissimos voluptatem
+                animi est earum, aut blanditiis recusandae quas ratione saepe eaque minima voluptatibus fugit molestiae
+                accusantium! Quae, consequatur doloremque?</p>
+        </section>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, itaque? Iste, veniam. Neque
+                reprehenderit suscipit cum, possimus vel laborum. Neque, quisquam ipsum. Mollitia atque, repudiandae
+                quasi minus quae amet! Eligendi.</p>
+            <p>Temporibus, provident! Tempora debitis, ex nemo ipsum quibusdam, blanditiis libero odit placeat porro
+                asperiores quis illum perspiciatis, sequi ducimus expedita hic vitae quia autem! Iste quidem hic maiores
+                quisquam modi?</p>
+        </section>
+        <footer>
+            <!-- 文章尾部 -->
+        </footer>
+    </article>
+    <aside>
+        <!-- 侧边栏 -->
+    </aside>
+    <footer>
+        <!-- 网站尾部 -->
+    </footer>
+
+    <!-- 包含关系 以前:块级元素包含行级元素，行级元素不可以包含块级元素，a元素除外 -->
+    <!-- 元素的包含关系和含义有关 -->
+    <!-- 例如h1元素能否包含p元素 标题不可以有段落 -->
+    <!-- 总结：
+    容器元素可以包含任意元素
+    a元素基本包含任意元素
+    标题元素和段落元素不能相互嵌套，并且不能包含容器元素
+    某些元素有固定子元素(ul>li;ol>li;dl>dt+dd) -->
+
+
+
+    <!-- 百度新闻案例 -->
+    <!-- 分析格式 划分容器 -->
+    <header>
+        <!-- 页头顶部区域样式 -->
+        <div>
+            <ul>
+                <li><a href="">网页</a></li>
+                <li><a href="">新闻</a></li>
+                <li><a href="">贴吧</a></li>
+                <li><a href="">知道</a></li>
+                <li><a href="">音乐</a></li>
+                <li><a href="">图片</a></li>
+                <li><a href="">视频</a></li>
+                <li><a href="">地图</a></li>
+                <li><a href="">文库</a></li>
+            </ul>
+            <ul>
+                <li><a href="">百度网页</a></li>
+                <li>
+                    <a href="">用户名</a>
+                    <!-- 列表里面可以嵌套列表！很常见 -->
+                    <ul>
+                        <li><a href="">我的主页</a></li>
+                        <li><a href="">账户设置</a></li>
+                        <li><a href="">退出</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="">百度新闻客户端</a></li>
+                <li><a href=""><img src="./../log-news.png" alt="" style="width: 10%;"></a></li> -->
+                <li><a href="">
+                        <!-- 当文字图片在一起的时候 给文字加一个无语义元素 方便css样式调节 -->
+                        <span>百度新闻客户端</span>
+                        <img src="./../log-news.png" alt="" style="width: 10%;">
+                    </a></li>
+                <!-- <li>
+                    <a href="">百度新闻客户端</a>
+                    <ul>
+                        <li><a href=""><img src="./../log-news.png" alt="" style="width: 10%;"></a></li>
+                    </ul>
+                </li> -->
+
+            </ul>
+        </div>
+        <!-- 页头中间区域样式 -->
+        <div>
+            <div>
+                <!-- h1标题一般用于网站标题 css可隐藏 其他标题用h2 -->
+                <h1>百度新闻</h1>
+                <a href=""><img src="./../log-news.png" alt="" style="width: 10%"></a>
+            </div>
+            <div>
+                <!-- 搜索区域：文本框+按钮 文本框 <input type=" text"> 按钮 button -->
+                <input type="text">
+                <button>百度一下</button>
+            </div>
+            <div>
+                <a href="">搜索</a>
+            </div>
+        </div>
+        <!-- 页头底部区域样式 -->
+        <div>
+            <!-- nav元素 html5中新元素，是一个容器元素 nav用于菜单栏 不用于文章-->
+            <!-- 菜单的几个写法如下： 用nav容器元素，用列表ul>li,nav和ul共同（不推荐）-->
+            <!-- 1 -->
+            <nav>
+                <a href="">首页</a>
+                <a href="">国际</a>
+                <a href="">国内</a>
+                <a href="">男性</a>
+                <a href="">女性</a>
+                <a href="">金融</a>
+            </nav>
+            <!-- 2 -->
+            <!-- <ul>
+                <li><a href="">首页</a></li>
+                <li><a href="">国际</a></li>
+                <li><a href="">国内</a></li>
+                <li><a href="">男性</a></li>
+                <li><a href="">女性</a></li>
+                <li><a href="">金融</a></li>
+            </ul> -->
+            <!-- 3 -->
+            <!-- <nav>
+                <ul>
+                    <li><a href="">首页</a> </li>
+                    <li><a href="">国际</a></li>
+                    <li><a href="">国内</a></li>
+                    <li><a href="">男性</a></li>
+                    <li><a href="">女性</a></li>
+                    <li><a href="">金融</a></li>
+                </ul>
+            </nav> -->
+        </div>
+    </header>
+
+    <!-- 中间部分的内容 -->
+    <div>
+        <!-- 热点新闻 -->
+        <div>
+            <!-- 左边 -->
+            <div>
+                <!-- 栏目标题 -->
+                <h2>热点新闻</h2>
+                <!-- 新闻文章列表 -->
+                <ul>
+                    <li>
+                        <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                    </li>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="">Officiis eius assumenda dolores unde!</a></li>
+                    <li><a href="">Eos repellendus illum fuga ratione!</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3><a href="">Recusandae neque ea adipisci quis.</a></h3>
+                    </li>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="">Rem explicabo iusto nostrum eum?</a></li>
+                    <li><a href="">Nulla voluptate facere odio alias.</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3><a href="">Nam earum exercitationem sed aperiam.</a></h3>
+                    </li>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="">Totam quae maxime blanditiis quos.</a></li>
+                    <li><a href="">Suscipit maiores quos ea itaque.</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3><a href="">Veritatis, nostrum iusto. Vitae, voluptatem.</a></h3>
+                    </li>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="">Quia quibusdam odio facere inventore?</a></li>
+                    <li><a href="">Inventore fugit tempore quo fuga.</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3><a href="">Tempore corporis eos reiciendis dignissimos.</a></h3>
+                    </li>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="">Qui debitis nobis provident cupiditate!</a></li>
+                    <li><a href="">Tempora voluptas inventore magni mollitia?</a></li>
+                </ul>
+            </div>
+            <!-- 右边 -->
+            <div>
+                <div>
+                    <div>
+                        <!-- 导航栏 轮播图 banner -->
+                        <!-- 图片区 -->
+                        <div>
+                            <!-- 图一 -->
+                            <div>
+                                <figure>
+                                    <a href=""><img src="./banner/banner1.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">ipsum dolor sit amet.</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <!-- 图二 -->
+                            <div>
+                                <figure>
+                                    <a href=""><img src="./banner/banner2.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">Lorem ipm dor si amt.</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- 箭头 -->
+                        <div>
+                            <a href="">&lt;</a>
+                            <a href="">&gt;</a>
+                        </div>
+                        <!-- 点点 -->
+                        <div>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 广告位 -->
+                    <div>
+                        <a href=""><img src="./banner/adv.png" alt=""></a>
+                    </div>
+                </div>
+
+                <!-- 热搜词 -->
+                <div>
+                    <div>
+                        <h3>
+                            热搜新闻词
+                            <span>HOT WORDS</span>
+                            <!-- 下面span是一个图标 -->
+                            <span></span>
+                        </h3>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="">Lorem.</a></li>
+                            <li><a href="">Quidem!</a></li>
+                            <li><a href="">Expedita!</a></li>
+                            <li><a href="">Alias.</a></li>
+                            <li><a href="">Minima!</a></li>
+                            <li><a href="">Sit?</a></li>
+                            <li><a href="">Ipsa.</a></li>
+                            <li><a href="">Temporibus.</a></li>
+                            <li><a href="">Rem!</a></li>
+                            <li><a href="">Ipsum.</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 百家号 -->
+                <div>
+                    <div>
+                        <h3>
+                            百家号
+                            <span>BAIJIA</span>
+                            <!-- 下面span是一个图标 -->
+                            <span></span>
+                        </h3>
+                    </div>
+                    <!-- 左边 -->
+                    <div>
+                        <ul>
+                            <li>
+                                <figure>
+                                    <a href=""><img src="./banner/banner1.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href=""><img src="./banner/banner1.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">Repellat cupiditate facilis est maxime!</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href=""><img src="./banner/banner1.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">Dicta eum cupiditate neque nulla!</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li>
+                                <figure>
+                                    <a href=""><img src="./banner/banner1.jpeg" alt=""></a>
+                                    <figcaption>
+                                        <h3><a href="">Nisi maiores possimus qui doloremque!</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 右边 -->
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                <li><a href="">Voluptatibus numquam alias facilis vel.</a></li>
+                                <li><a href="">Voluptas fugit labore voluptatibus ab!</a></li>
+                                <li><a href="">Illum quasi commodi eaque maxime.</a></li>
+                                <li><a href="">Distinctio et illum non laboriosam?</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                <li><a href="">Voluptatem nulla neque veritatis sint.</a></li>
+                                <li><a href="">Eveniet nobis odio totam dolorem.</a></li>
+                                <li><a href="">Adipisci, dolore tenetur! Illum, iure?</a></li>
+                                <li><a href="">Architecto est sed quaerat nobis.</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                                <li><a href="">Enim tempora at error aliquam.</a></li>
+                                <li><a href="">Veniam nihil harum odio autem?</a></li>
+                                <li><a href="">Asperiores eius distinctio rem ad!</a></li>
+                                <li><a href="">Cumque vel minima laboriosam facilis?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 其他栏目 -->
+        <!-- <div></div> -->
+        <!-- 其他栏目 -->
+        <!-- <div></div> -->
+
+    </div>
+
+    <!-- 侧边栏 -->
+    <aside></aside>
+
+    <!-- 尾部 -->
+    <footer>
+
+        <div>
+            <!-- 左 -->
+            <div>
+                <div>更多精彩内容</div>
+                <div>
+                    <div><a href=""><img src="" alt=""></a></div>
+                    <div><a href="">Android下载</a><a href="">Iphone下载</a></div>
+                </div>
+                <div>扫描二维码，收看更多新闻</div>
+            </div>
+            <!-- 右 -->
+            <div>
+                <h4>百度新闻独家出品</h4>
+                <div>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Ipsa optio commodi aliquam eius.</li>
+                        <li>Harum quod facere et dolorum!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <p>责任编剧:
+                <span></span>
+                <span></span>
+                <span></span>
+            </p>
+
+            <p>
+                <a href="">用户协议</a>
+                <a href="">隐私策略</a>
+                京公网安备11000002000001号 互联网新闻信息服务许可 ©2023Baidu
+
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </p>
+
+
+
+        </div>
+    </footer>
+
+    <p>css<span>样式</span>test</p>
+
+    <a href="https://www.baidu.com">baidu </a>
+    <a href="https://www.sina.com.cn/">sad</a>
+    <a href="https://www.douyu.com">asfadsv</a>
+
+
+    <!-- initial:默认值，初始值；inherit：手动（强制）继承 -->
+
+    
+</body>
+
+</html>

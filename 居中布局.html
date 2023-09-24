@@ -1,0 +1,161 @@
+<!-- 居中布局 
+元素在包含块内居中
+
+行盒（行块盒）的水平居中
+即在父元素设置text-align：center；
+
+常规流块盒（浮动、据对定位都是块盒）的水平居中
+即定宽（不定宽width就是auto会撑满）然后设置左右margin为auto
+
+浮动 现阶段学习没有好办法 只有css3可以
+
+绝对定位元素 即left：0 right：0 然后设置margin：0 auto；
+固定定位（fixed）就是绝对定位（absolute）的特殊情况 包含块不同 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平居中</title>
+    <style>
+        div {
+            margin: 30px;
+            height: 300px;
+            background-color: lightblue;
+            text-align: center;
+            position: relative;
+        }
+
+        .inline-block {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        p {
+            width: 300px;
+            height: 100px;
+            overflow: auto;
+            margin: 0 auto;
+        }
+
+        .absolute {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+        }
+
+        .fixed {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div><a href="">dsd</a></div>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore tempora minima soluta, quaerat hic, facilis
+            placeat nostrum quis officia libero, voluptatibus similique? Aperiam voluptas corporis laboriosam, ipsum
+            error accusamus quibusdam.</p>
+    </div>
+    <div>
+        <img src="./u=3294831775,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp" alt=""
+            style="width: 100px;">
+    </div>
+    <div>
+        <div class="inline-block"></div>
+    </div>
+
+    <div>
+        <div class="absolute"></div>
+    </div>
+    <div>
+        <div class="fixed"></div>
+    </div>
+</body>
+
+</html> -->
+
+<!-- 单行文本的垂直居中
+即是line-height为height的值 即文本垂直居中
+
+行块盒或块盒的多行文本的垂直居中 
+没有完美方案 可以通过设置上下padding来达到类似的居中 
+缺点：不能知道固定的高度
+
+据对定位的垂直居中 （最好）
+即设置top:0;bottom:0; 上下margin为auto -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直居中</title>
+    <style>
+        p {
+            /* 单行文本 */
+            margin: 30px;
+            background-color: lightblue;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .inline-block {
+            /* 行块盒通过padding来类似垂直居中 */
+            margin: 30px;
+            background-color: lightblue;
+            padding: 100px 0;
+        }
+
+        .container {
+            position: relative;
+            height: 300px;
+            background-color: lightblue;
+        }
+
+        .container .absolute {
+            /*绝对定位垂直居中 */
+            position: absolute;
+            height: 100px;
+            top: 0;
+            bottom: 0;
+            background-color: red;
+            width: 100px;
+            margin: auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>标题</p>
+
+    <div class="inline-block">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita consectetur ab debitis molestias
+        odit veritatis illum cum eos nemo ipsa ullam eius, veniam totam, beatae sed dolore molestiae obcaecati?
+    </div>
+
+    <div class="container">
+        <span class="absolute"></span>
+    </div>
+
+</body>
+
+</html> -->

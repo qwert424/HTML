@@ -1,0 +1,72 @@
+<!-- 1、br
+无语义
+在文本内换行
+不建议、因为不能控制样式
+一般使用div或者span（display：block）来换行
+
+2、hr
+无语义
+分割线
+不推荐、因为推崇语义化 样式通过css来实现
+一般使用下边框或上边框加线
+
+3、b
+原先无语义 即bold 用于加粗文本
+现突出 重点 在语音上阅读可能有加重停顿效果 同等重要的文体分隔文本，如产品名称。
+
+4、time
+时间 即给机器、浏览器阅读的 没样式 属性为datetime  -->
+<time datetime="2023-5-1">今年五月9号</time>
+
+<!-- 5、abbr
+缩写
+属性title填写全名称
+基础样式加下边框点点样式 -->
+<abbr title="">sss</abbr>
+
+<!-- 6、q
+小文本的引用
+属性cite用于填写引用文本的地址
+样式就是通过after before来就加双引号 -->
+<q cite="">shuodehao </q>
+
+<!-- 7、blockquote
+大文本的引用
+同样拥有属性cite
+样式为单独一块 -->
+<blockquote cite="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptatibus eaque magni distinctio eum
+    quaerat facilis voluptatem delectus? Quas, eveniet. Repudiandae, odio vero? Facilis minus amet qui quisquam dolorem!
+    Rerum!</blockquote>
+
+<!-- 8、meta
+meta也可用于搜索引擎优化seo
+元数据元素
+元素表示那些不能由其它 HTML 元相关（meta-related）元素表示的元数据信息。如：<base>、<link>、<script>、<style> 或 <title>。
+meta name属性可以放author content、description、keywords等 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ssss,sssss">
+    <meta name="author" content="ssss,sssss">
+    <meta name="description" content="sss啊实打实发生发生ss">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+<!-- 9、link
+<link rel="stylesheet" href="">
+链接外部
+可以设置图标
+属性有 rel关系 即两表之间的关系是声明 href是地址 还有一个可省略的属性为type 即MIME 一般有 image/x-icon、text/css啥的
+图标关系是：icon 或者shortcut icon 
+图标也可以放在根目录 命名为favicon-->
+<!-- <link rel="shortcut icon" href=""> -->

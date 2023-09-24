@@ -1,0 +1,77 @@
+input[type="text"],
+select,
+button,
+textarea {
+    border: 1px solid #000;
+    color: #999;
+}
+
+button {
+    color: #000;
+}
+
+input[type="text"] {
+    padding: 0 10px;
+}
+
+input[type="text"]:focus,
+select:focus,
+button:focus,
+textarea:focus {
+    border: 1px solid #008c8c;
+    color: #000;
+}
+
+fieldset {
+    line-height: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* form fieldset label input[type="radio"]:checked+span {
+    color: #008c8c;
+} */
+
+form fieldset label .radio,
+form fieldset label .radio::after {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+}
+
+form fieldset label .radio.checked:after {
+    content: "";
+    display: none;
+    border: none;
+    width: 6px;
+    height: 6px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+
+form fieldset label input[type="radio"]:checked+.radio {
+    border: 1px solid #008c8c;
+
+}
+
+form fieldset label input[type="radio"]:checked+.radio.checked::after {
+    background-color: #008c8c;
+
+    display: block;
+
+}
+
+form fieldset label input[type="radio"] {
+    display: none;
+}
+
+form fieldset label input[type="radio"]:checked~span {
+    color: #008c8c;
+    
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flash学习</title>
+</head>
+
+<body>
+    <!-- flash的使用一般用 object embed 这两个都是可替换元素 -->
+    <!-- <object data="" type=""></object> data:数据地址 type：类型 object里面可以有子元素param-->
+    <!-- <embed src="" type=""> src：数据地址 type：类型 如果要书写参数直接在内部写即可 即参数名=“参数值” 没有子元素-->
+    <!-- type中要放MIME标准
+        MIME：多用途互联网邮件扩展类型
+        https://baike.baidu.com/item/MIME/2900607中查找 flash常用的.swf即可 -->
+    <object data="" type="">
+        <!-- param即参数 参数名 参数值 js控制 -->
+        <param name="" value="">
+    </object>
+    <embed quality="high" src="" type="">
+
+        <!-- 如果需要兼容性 即object内嵌embed -->
+        <object data="" type="">
+            <param name="" value="">
+            <!-- 如果object可以识别 则embed不可以作为object子元素 会被浏览器忽略 如果object不能识别 则顺读代码 运行embed -->
+            <embed src="" type="">
+        </object>
+</body>
+
+</html>

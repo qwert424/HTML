@@ -1,0 +1,323 @@
+<!-- 样式补充
+
+1.display：list-item
+即列表项
+这是css属性值 设置该属性值的元素本质上是一个块盒（仍然是块盒）
+但是区别是 与此同时会生成附带的盒子
+元素本身的盒子叫做主盒子 生成的盒子叫做次盒子
+先排列次盒子 在排列主盒子
+ul li （ol li）就是设置了display：list-item
+（所以不只是ul有此样式 注重语义化 样式css来）
+padding margin 宽高都是设置的主元素盒子 和次元素盒子无关
+次盒子的样式有 list-style-type（次元素的样式 默认disc）  list-style-position（次元素的位置 相对主元素）
+list-style-image
+且属性可以继承
+有速写属性 即 list-style： ；
+清空次元素 即 list-style：none；
+
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        div {
+            border: 2px solid;
+            width: 500px;
+            height: 500px;
+            margin: 50px;
+            background-color: lightblue;
+            padding: 30px;
+        }
+
+        p {
+            display: list-item;
+            /* padding margin 宽高都是设置的主元素盒子 和次元素盒子无关 */
+            /* margin-left: 50px; */
+            /* padding: 0 50px; */
+            /* list-style-type: circle;
+            list-style-position: inside; */
+            list-style: circle inside;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>nihao</p>
+    </div>
+    <ul>
+        <li>Lorem.</li>
+        <li>Nulla?</li>
+        <li>Numquam?</li>
+        <li>A!</li>
+        <li>Officiis.</li>
+    </ul>
+</body>
+
+</html> -->
+
+<!-- 图片失效时候的宽高问题 
+因为图片正常可以设置样式 但是在失效的时候 宽高会失效 即像普通行盒一样 无法设置宽高 
+如果想要失效了之后仍然宽高有效 可以设置图片为块盒或行块盒
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="" alt="失效图片">
+</body>
+
+</html> -->
+
+<!-- 行盒中包含行块盒或者可替换元素（img、input、studio、video等和属性有关 样式css无法完全控制的元素
+
+行盒的高度和内部的行块盒或者可替换元素无关 和font-size相关
+
+行盒内部元素设置成display：block就可以把行盒撑开
+
+哪里会出现什么问题呢？
+就是在给行盒设置边框的时候就会出现问题 (字体参考线)
+此处也会出现图片底部百边 设置font-size：0或者display：block即可
+-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            /* border: 2px solid; */
+            /* display: inline-block; */
+        }
+
+        img {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href=""><img src="./u=3294831775,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp" alt=""></a>
+</body>
+
+</html> -->
+
+<!-- text-align：justify
+对齐方式
+除了最后一行 其他行文本的空白平均分布
+如果想要最后一行也平均分布 需要如下：
+::after{
+    content:"";
+    display:inline-block;
+    width:100%
+}
+
+一般用作inline-block盒子的间隔排列
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: lightblue;
+            width: 500px;
+            margin: auto;
+            text-align: justify;
+        }
+
+        p::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit in dolorem, quae vitae labore soluta, iusto, natus
+        aut ad minima consequatur modi. Aliquam ducimus fuga labore vitae dolores eveniet rerum?</p>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            background-color: lightblue;
+            text-align: justify;
+        }
+
+        .container::after {
+            content: "";
+            display: inline-block;
+            width: 100%;
+        }
+
+
+        .item {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html> -->
+
+
+<!-- 制作一个三角形
+思路就是：边框
+将内容盒子宽高设置为0 边框给宽度 既可以有四个方向上的三角形 将除了所需方向上的三角形（边框颜色 border-left-color:）设置为透明 也就是transparent即可 -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            border-right-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html> -->
+
+<!-- 文字排列循序 和书写方向
+direction:用来设置文本、表列水平溢出的方向。文本方向通常由文档定义 (e.g., with HTML's dir attribute) 而不是通过直接使用 direction 属性定义。
+writing-mode: 属性定义了文本水平或垂直排布以及在块级元素中文本的行进方向。 
+
+开始start》结束end
+左left》右right
+开始结束是相对的 左右绝对的
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            direction: rtl;
+            writing-mode: vertical-rl;
+            /* 宽度 */
+            /* width: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>卜算子·我住长江头</p>
+        <p>宋·李之仪</p>
+        <p>我住长江头，君住长江尾。</p>
+        <p>日日思君不见君，共饮长江水。</p>
+        <p>此水几时休，此恨何时已。</p>
+        <p>只愿君心似我心，定不负相思意。</p>
+    </div>
+</body>
+
+
+</html> -->
+
+<!-- 
+utf-8编码
+显示文字可以用utf-8直接显示
+&+#+x（16进制）
+你好 》 &#x4F60;&#x597D;
+
+用处：
+1、 可以直接使用
+2、 可以用于伪元素选择器（特殊字符 写在content：""内 格式如：content："\59EC" 即去掉&#x加斜杆）
+
+字体图标用到了
+-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::after{
+            /* 不能写实体字符 */
+            content: "\4F60";
+        }
+    </style>
+</head>
+
+<body>
+    &#x4F60;&#x597D;
+    <p></p>
+</body>
+
+</html> -->

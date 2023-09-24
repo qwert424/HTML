@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            display: -webkit-box;
+            /*将对象作为弹性伸缩盒子模型显示*/
+
+            -webkit-line-clamp: 3;
+            /*限制在块元素文本的行数，它需要组合其他的WebKit属性*/
+
+            -webkit-box-orient: vertical;
+            /*设置盒子的子元素的排列方式*/
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="a">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias nulla, provident blanditiis rem
+            animi ut, tenetur, assumenda ab quia incidunt nam autem dignissimos? Accusamus fugiat aliquid perferendis
+            animi quis cumque numquam unde ipsum similique. Doloremque qui voluptatibus cupiditate voluptates optio
+            tempore quasi soluta non dolor perspiciatis! Tenetur obcaecati doloremque quam dolore aliquam suscipit
+            autem, eveniet incidunt odit asperiores voluptates nam. Enim libero aliquam deleniti. Vel minus praesentium
+            quasi delectus saepe odit vitae, nemo voluptas iure quo, cum dignissimos officiis iusto veniam laboriosam
+            totam. Reprehenderit, voluptas eligendi, iure quibusdam veniam exercitationem molestias, expedita sed
+            quisquam earum nemo ipsum aliquam facilis enim.</div>
+    </div>
+</body>
+
+</html>

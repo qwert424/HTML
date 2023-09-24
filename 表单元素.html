@@ -1,0 +1,73 @@
+<!-- 表单元素
+
+一系列元素用于搜集用户信息
+
+input元素 即输入框（很多是可选择元素 如：date、color等）
+-type属性
+type：text 普通输入框 可通过js来设置未输入时候显示的字 也可以使用value或者placeholder
+value：值
+placeholder：设置未输入时候显示的字 当用户输入值时候不显示
+type：password 密码框
+type：number 数字框 只能输入数字（placeholder可以写字） 可正可负 可以通过min max step 设置最小值 最大值 步长
+type:file 上传文件、图片等 配合js、后端
+type:color 样式不可改 颜色盘 可用js控制
+type：range 选择条 通过js控制 可设置 max min step
+label 配合checkbox使用 点击文本可以打勾 提高交互性 一般配合for id属性使用 如果将input写在label内就是隐式关系不需要for id
+type:chectbox 多选框 name属性是将复选框进行分类 方便后端知道这一组多选框的类型 可选择取消 默认选择用checked
+type：radio 单选框 类似多选框 要有一个name属性分组 不然不知道那些单选框为一组 默认选择用checked
+type：date 日期
+type：search 搜索框 手机端在输入后回车变成搜索
+type:button submit reset 按钮 前面一个是无语义 后面两个一个是提交 一个是重置 value设置文字
+
+select：下拉框
+配合option使用（只能使用option子元素）
+默认选择用selected
+可以分组，使用optgroup 取名用label=""即可 分组不会被选择
+
+
+textarea 多行文本框
+也有placeholder属性
+col多少列 row多少行（col row对应英文字）基本通过css来写样式
+内部加文字一般通过js 且不空白折叠pre
+
+button 按钮
+type属性值为：button reset submit
+默认值为submit
+一般静态页面改成type="button"较好
+button内容不是写在value内 而是元素内 可以更多元 不用单单文本 可以多个 可以图案甚至视频 样式更好设置
+建议使用button 而不是input内的按钮
+
+配合表单元素使用的其他元素：
+
+label 普通元素 通常和单选框、多选框使用
+有显示关联和隐式关联
+显示关联 通过label的for属性来关联表单元素的id值
+隐式关联 就是将input放在label元素内 不需要for属性
+
+datalist 数据列表 一般和文本框使用 即：下拉框提示
+子元素为option（选项） 文本框通过list属性来关联datalist的id
+一般不使用这个 因为 兼容性 和 数据写死 不便利 数据太大
+默认为 display：none；
+option内的value值显示左边 内部输入在右边 且回车使用的是value值 如果不写value就不显示
+
+form元素 类似于div 就是将表单元素放在里面 两个属性值 action即发送到的地址 method发送方式
+内部的表单元素都需要定义name属性 传输的是name和value值
+
+fieldset 分组 即对表单进行分组 语义化 子元素有一个legend 类似表头
+
+表单状态：
+readonly 即只读 不改变样式 一般用于用户可填写的地方 在传输仍然传输这个表单元素内容
+disabled 即禁用 改变样式 所有的表单元素都可设置 禁用了之后表单在传输不传输这个表单元素 
+
+
+美化表单的元素 
+伪元素：
+：focus 聚焦 所有表单都可以设置这个伪类值 一般reset.css会重置表单元素的原本样式和聚焦样式
+：checked 单选框 多选框被选中效果 但是单选框多选框为可替换元素 很多样式css无法改变 所以 可以通过 ：checked+下一个类样式来设置 也可以通过：checked~下一个类选择器来选中多个设置自己的样式 重点
+textarea可以通过resize来控用户能否调整尺寸 默认值为both
+both：水平、垂直都可以
+none：水平、垂直都不可以
+horitontal：水平可以
+vortical：垂直可以
+-->
+ 

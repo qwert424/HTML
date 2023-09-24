@@ -1,0 +1,86 @@
+<!-- svg:scalable voctor graphics，可缩放的矢量图
+特点：
+用代码生成的图
+缩放不失真
+占空间小
+
+怎么使用？
+svg可以嵌套在浏览器（直接将svg代码复制进去） 也可以单独做一个文件（代码引用）
+
+xml语言来定义、写svg
+img、embed、object、iframe可以直接调用svg
+也可以通过背景图调用svg
+如下： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img,
+        embed,
+        object {
+            width: 100px;
+            height: 100px;
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            background: url(./微信.svg) center/cover no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./微信.svg" alt="">
+    <p></p>
+    <embed src="./微信.svg" type="image/svg+xml">
+    <object data="./微信.svg" type="image/svg+xml"></object>
+    <iframe src="./微信.svg" frameborder="0"></iframe>
+</body>
+
+</html> -->
+<!-- 
+怎么写svg？
+svg中fill为填充颜色（透明transparent） stroke为边框颜色 stroke-width为边框宽度 且不带单位
+默认 svg为300宽150高
+<svg style="background:#ccc" xmlns="http://www.w3.org/2000/svg">
+
+</svg> 
+即可通过style设置属性
+矩形 rect 属性宽、高 x为距离左边的距离 y为距离上边的距离
+圆形 circle 属性 圆心cx cy 分别表示圆心在x轴y轴的数值 半径r
+椭圆形 ellipse 两个半径 rx ry 分别表示在x轴y轴的园半径 圆心cx cy
+线段 line 两个坐标值 x1 y1 x2 y2 将他们连接  设置边框
+多线段 polyline（如果填充颜色 就是将起始坐标和结束坐标连接起来 闭合的区域 ）多个点的坐标 设置边框 points属性里面书写多个端点坐标值
+多边形 polygon  也是在属性points填写端点坐标值 会自动将起始点和结束点相连接
+路径 path
+属性
+M = moveto 起始移动到的点的x轴和y轴的坐标
+L = lineto 需要两个参数，分别是一个点的x轴和y轴坐标，L命令将会在当前位置和新位置（L前面画笔所在的点）之间画一条线段
+H = horizontal lineto  绘制平行线
+V = vertical lineto 绘制垂直线
+C = curveto
+S = smooth curveto
+Q = quadratic Bézier curve
+T = smooth quadratic Bézier curveto
+A = elliptical Arc 弧线（圆形线、椭圆线）
+A的值很复杂：
+第一个数为x轴半径
+第二个数为y轴半径
+第三个数为弧线的旋转情况
+第四个数为小弧线（0)还是大弧线（1）
+第五个数为顺时针画（1）还是逆时针画（0）
+第六个数为结束坐标
+
+弧形命令A的前两个参数分别是x轴半径和y轴半径，弧形命令A的第三个参数表示弧形的旋转情况，large-arc-flag（角度大小） 和sweep-flag（弧线方向），large-arc-flag决定弧线是大于还是小于180度，0表示小角度弧，1表示大角度弧。sweep-flag表示弧线的方向，0表示从起点到终点沿逆时针画弧，1表示从起点到终点沿顺时针画弧。
+
+Z = closepath 从当前点画一条直线到路径的起点
+
+注意：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
+-->
+

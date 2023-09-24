@@ -1,0 +1,219 @@
+<!-- font-size设置文字的相对大小 
+文字设置有很多线 text-top，ascent 也就是顶线； super 也就是上基线； baseline 也就是基线；sub 也就是下基线； text-bottom 也就是底线
+每个文字设计者都会设置文字和框的比例 文字的相对大小 一般有 1000 2048 1024 也就是比例
+文字的顶线到底线的距离叫做文字的真实大小 也就是content-area（内容区）
+所以在设置font-size为200px时候 文字的高度不是200px 因为 font-size设置的是相对大小 经过计算 得到真实的content-area大小
+行盒的背景会覆盖文字的真实区域（content-area） 
+文字内容的实际大小不可调 通过调相对大小来改变文字大小-->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        span {
+            font-size: 200px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        M
+    </span>
+</body>
+
+</html> -->
+
+<!-- line-height:
+文字顶边向上延申的距离，文字底边向下延申的距离，两者距离相同，即gap（空隙）
+文字顶边向上延申的距离（line gap）有一条线 叫做top
+文字底边向下延申的距离（line gap）有一条线 叫做bottom
+top到bottom的距离叫做virtual-area（虚拟区）
+行高就是virtual-area
+line gap可以为负数
+line-height:normal 默认值
+》文字一定出现在行的中间 ——错误
+》concent-area一定在virtual-are中间 ——正确
+-->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* height: 300px; */
+            background-color: red;
+        }
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 200px;
+            background-color: #008c8c;
+            line-height: 1;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <p><span>M </span></p>
+</body>
+
+</html> -->
+<!-- vertical-align:
+决定参考线的参数：font-size、font-family、line-height
+一个元素如果子元素出现行盒，那么该元素会生成参考线 
+vertical-align默认值为基线对齐
+baseline：该元素的基线和父元素的基线对齐
+super：该元素的基线和父元素的上基线对齐
+sub:该元素的基线和父元素的下基线对齐
+text-top：该元素的vertical-area的顶边（top）（也就是line-height）对齐父元素的text-top
+text-bottom：该元素的vertical-area的底边（bottom）（也就是line-height）对齐父元素的text-bottom
+top：该元素的vertival-area的顶边（top）对齐父元素vertical-area的顶边（top）（该行中最高的顶边）
+bottom：该元素的vertival-area的底边（bottom）对齐父元素vertical-area的底边（bottom）（该行中最低的底边）
+middle：该元素的content-area的一半和父元素的x字母的高度的一半对齐
+
+行盒组合起来，可以形成多行，每一行的区域叫做line-box，line-box的顶边（top)为该行内所有行盒的最高顶边（top），line-box的底边（bottom）为该行内所有行盒的最低底边（bottom）
+
+inline-box：行盒
+line-box：行框
+
+实际上一个元素的实际占用高度（自动计算时），高度的计算通过line-box计算（计算每行的line-box的高度）
+
+
+》》
+
+top：该元素的vertival-area的顶边（top）对齐line-box的顶边
+bottom：该元素的vertival-area的底边（bottom）对齐line-box的底边
+
+数字：基于baseline 正为上 负为下
+百分比：基于baseline 基于自身vertical-area的高度
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: red;
+        }
+
+        span {
+            font-size: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>M
+        <span>M</span>
+        <span style="font-size: 5em;">M</span>
+    </p>
+
+
+</body>
+
+</html> -->
+<!-- line-box（行框）是承载文字内容的必要条件，一下情况不生成行框：
+1、一个元素内没有任何行盒
+2、font-size设置为0 
+没有行框就不存在参考线-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* 不生成行框 因为自动高度通过line-box来设置 所以p的高度为0 但是即使把p的高度调大也不显示span中的文字 因为font-size为0 不生成行框 */
+            font-size: 0;
+            
+        }
+
+        span {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <p><span>M</span></p>
+</body>
+
+</html> -->
+<!-- 可替换元素和行块盒子
+图片的基线在图片的下外边距 所以基线对齐时候 图片在块盒内一般底边有白边
+表单元素的基线在文字内容的底边
+行块盒的基线比较复杂 一般为最后一行如果有line-box 则以最后一行的line-box的基线作为整个行块盒的基线
+但是当行块盒内部没有line-box的时候 则以行块盒的下外边距为基线 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="checkbox">选择M
+    </div>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            border: 2px solid;
+            padding: 20px;
+            /* margin-bottom: 100px; */
+        }
+
+        .h1 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tempora ipsum, doloremque repellat
+            aut aspernatur ipsa nisi doloribus expedita explicabo vel labore impedit fugit blanditiis minima soluta
+            dolores? Molestiae, itaque.
+            <span class="h1"></span>
+        </span>
+        M</div>
+</body>
+
+</html> -->

@@ -1,0 +1,129 @@
+body {
+    background: url("./../432e2ba88f4883c07faf9b3daa5a4dd.png")no-repeat center top/100% 100%;
+    background-attachment: fixed;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    width: 1200px;
+    height: 75px;
+    background: brown;
+    margin: 40px auto;
+    border: 1px solid #3f2a22;
+    border-left: none;
+    border-right: none;
+    position: relative;
+
+}
+
+.header .nav a {
+    width: 160px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    color: #f8b700;
+    border-right: 1px solid #3f2a22;
+    font-weight: bold;
+}
+
+.header .nav a:first-child {
+    border-left: 1px solid #3f2a22;
+}
+
+.header .nav a:nth-child(6) {
+    border-left: 1px solid #3f2a22;
+}
+
+.header .nav a.left {
+    float: left;
+}
+
+.header .nav a.right {
+    float: right;
+}
+
+.header .logo {
+    width: 250px;
+    height: 120px;
+    background: url("./../4950139ca54c888f01c6b0e2a8bdf7c.png") no-repeat;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.header .logo h1 {
+    display: none;
+}
+
+.botton {
+    text-align: center;
+}
+
+.botton a {
+    width: 230px;
+    height: 80px;
+    display: inline-block;
+    margin-top: 300px;
+}
+
+.botton a.learn {
+    background: url("./../5dcdbecd9dff5269acdb0ea425d1432.png")no-repeat left center/200%;
+}
+
+.botton a.download {
+    background: url("./../5dcdbecd9dff5269acdb0ea425d1432.png")no-repeat -230px center/200%;
+}
+
+.botton a.learn h2 {
+    display: none;
+}
+
+.botton a.download h2 {
+    display: none;
+}
+
+.main {
+    width: 1037px;
+    height: 170px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.main .item {
+    float: left;
+    height: 170px;
+    margin-right: 20px;
+    outline: 1px solid #3f2a22;
+}
+
+.main .item:last-child {
+    margin-right: 0px;
+}
+
+.main .item .title {
+    background-color: #3f2a22;
+    color: #f8b700;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #3f2a22;
+    box-sizing: border-box
+}
+
+.main .item .img {
+    height: 121px;
+}
+
+.main .item .img img {
+    height: 121px;
+}

@@ -1,0 +1,221 @@
+<!-- ; 块级格式化布局 Block Formatting Context 简称BFC
+; 即一块独立的渲染区域 规定了范围区域内 常规流块盒的布局（块盒所以和行盒没关系）
+; 生成BFC的元素有：
+; 根元素（html 覆盖网页所有元素）
+; 浮动和绝对定位元素（fixed）
+; overflow不为visible的块盒等
+
+行块盒子本身就是bfc
+
+; 独立的：不同的BFC渲染区域互不干扰
+; 规则：
+; 生成BFC的元素，在自动高度时候计算浮动元素的高度（即除了clearfix：after外，可以设置为overflow：hidden最小影响，如果设置为浮动元素和绝对定位改变盒子类型 影响大）（此处计算浮动元素 不能计算绝对定位元素 因为据对定位的元素完全脱离盒子）
+; 生成BFC的元素，在遇到浮动元素时候 边框盒子会避开浮动元素 即会自动添加类似外边距的效果 这个效果可以设置一个侧边栏固定的样式
+; 生成BFC的元素，不会和子元素的外边距合并 即样式渲染区域内部外部不干扰
+ -->
+<!-- 规则一： -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: lightblue;
+            /* 将他变成生成BFC元素，就会计算浮动元素的高度 */
+            overflow: hidden;
+        }
+
+        .item {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: lightblue;
+            /* 将他变成生成BFC元素，不会计算绝对定位元素的高度 */
+            overflow: hidden;
+        }
+
+        .item {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body> -->
+
+<!-- 规则二： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            float: left;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin: 20px;
+        }
+
+        .container2 {
+            height: 300px;
+           
+            background-color: lightblue;
+            /* 在遇到浮动元素时候 边框盒子会避开浮动元素 */
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container1"></div>
+    <div class="container2"></div>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            margin: 20px;
+        }
+
+        .container2 {
+            height: 300px;
+            background-color: lightblue;
+            /* 在遇到浮动元素时候 边框盒子不会避开据对定位元素 */
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container1"></div>
+    <div class="container2"></div>
+</body>
+
+</html> -->
+<!-- 规则三： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            margin: 30px;
+            background-color: lightblue;
+            /* 生成BFC的元素，不会和子元素的外边距合并 */
+            overflow: hidden;
+        }
+
+        .child {
+            height: 100px;
+            background-color: red;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html> -->

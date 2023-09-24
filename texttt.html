@@ -1,0 +1,103 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset=" utf-8">  
+    <meta name="author" content="http://www.softwhy.com/" />  
+    <title>蚂蚁部落</title>  
+    <style type="text/css">  
+        .main{  
+            width:738px;  
+            height:280px;  
+            margin:0px auto;  
+            border:5px solid #696;  
+            position:relative;  
+        }  
+        a{text-decoration:none}  
+        .main .cite{  
+            width:738px;  
+            position:absolute;  
+            bottom:0px;  
+            left:0px;  
+            text-align:center;  
+            -moz-opacity:0.5;  
+            filter:alpha(opacity=50);  
+            opacity:0.5;  
+            background:#333;  
+            border-bottom:2px solid #000;  
+            border-top:2px solid #000;  
+            color:white;  
+            overflow:hidden;  
+            display:none;  
+        }  
+        .main .word{  
+            position:absolute;  
+            height:0px;  
+            width:738px;  
+            text-align:center;  
+            bottom:0px;  
+            left:0px;  
+            color:white;  
+            display:block;  
+            overflow:hidden;  
+        }  
+    </style>  
+    <script type="text/javascript">  
+        var speed=10;  
+        var citeH=0;  
+        var flag;  
+        window.onload=function(){  
+            var cite=document.getElementById("cite");  
+            var word=document.getElementById("word");  
+            var main=document.getElementById("main");  
+  
+            function addHeight(){  
+                clearInterval(flag);  
+                cite.style.display="block";  
+                if(citeH<86){  
+                    citeH=citeH+1;  
+                    cite.style.height=citeH+"px";  
+                    word.style.height=citeH+"px";  
+                }  
+                else{  
+                    clearInterval(flag);  
+                    return;  
+                }  
+                flag=setInterval(addHeight,speed);  
+            }  
+  
+            function reduceHeight(){  
+                clearInterval(flag);  
+                if(citeH>0){  
+                    citeH=citeH-1;  
+                    cite.style.height=citeH+"px";  
+                    word.style.height=citeH+"px";  
+                }  
+                else{  
+                    clearInterval(flag);  
+                    cite.style.display="none";  
+                    return;  
+                }  
+                flag=setInterval(reduceHeight,speed);  
+            }  
+  
+            if(main.addEventListener){  
+                main.addEventListener("mouseover",addHeight,false);  
+                main.addEventListener("mouseout",reduceHeight,false);  
+            }  
+            else{  
+                main.attachEvent("onmouseover",addHeight);  
+                main.attachEvent("onmouseout",reduceHeight);  
+            }  
+        }  
+    </script>  
+</head>  
+<body>  
+<div class="main" id="main">  
+    <a href="#">  
+        <img src="1.jpg" border="0">  
+        <div class="cite" id="cite"></div>  
+        <div class="word" id="word">爱护大自然，共享自然风光</div>  
+    </a>  
+</div>  
+</body>  
+</html>  

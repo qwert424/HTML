@@ -1,0 +1,98 @@
+<!-- 堆叠上下文 ：和BFC类似 也就是（stack context），也就是一块区域，该区域由某个元素创建，它规定了该区域内 内容在z轴的排列顺序
+生成堆叠上下文的元素有：
+html元素（整个网页都是堆叠上下文)(根元素)
+z-index不为默认值auto的定位元素（因为元素不是定位元素的话 z-index不生效 且要设置了z-index的数值的元素才能在内部生成堆叠上下文
+同个堆叠上下文区域的堆叠规则z轴排列
+从前到后
+1、生成堆叠上下文的元素的背景和边框 永远在最（前）下面
+2、堆叠级别z-index设置为负数的堆叠上下文（定位了z-index数字的定位元素会生成堆叠上下文）
+3、常规流的块盒
+4、非定位的浮动盒子
+5、常规流的行盒
+6、堆叠级别（z-index）为auto的定位元素、堆叠级别为z-index=0的堆叠上下文
+7、堆叠级别z-index为正数的堆叠上下文元素
+ -->
+
+
+<!-- 同一堆叠上下文区域内的z轴排序： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同一堆叠上下文区域内的z轴排序：</title>
+    <style>
+        html {
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .black {
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        .container {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        .item {
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: -20px;
+            margin-top: 10px;
+        }
+
+        p span {
+            background-color: yellow;
+        }
+
+        .text {
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: auto;
+            top: 50px;
+            left: 120px;
+        }
+
+        .text1 {
+            background-color: #008c8c;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 1;
+            top: 150px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><span>ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam impedit labore dolorem dolores? Et
+            exercitationem repudiandae itaque a aliquid. Consequatur debitis libero reiciendis quidem, dolores illo
+            eveniet
+            a saepe.</span> </p>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+    <div class="black"></div>
+    <div class="text"></div>
+    <div class="text1"></div>
+</body>
+
+</html> -->
+<!-- 
+不同堆叠上下文的区域相互独立 独立于其他堆叠上下文 他们之间不能穿插 也就是一个整体（换个思路：因为堆叠上下文的规则中，生成堆叠上下文的元素的背景在最下面永远（即使内部其他元素将z-index设置数值为-9999999.也是背景在最下方，所以当一个堆叠上下文高于另外一个堆叠上下文 即它内部的所有都高于那个堆叠上下文！！一个整体 -->

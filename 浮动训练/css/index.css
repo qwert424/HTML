@@ -1,0 +1,137 @@
+.main {
+    line-height: 2;
+    color: #333;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.main nav.nav {
+    background-color: #47464a;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #999;
+}
+
+.main nav.nav a {
+    margin: 0 30px;
+}
+
+.main nav.nav a:hover {
+    color: #fff;
+}
+
+.main nav.nav a.select {
+    color: #ef4238;
+}
+
+.main .container {
+    width: 1120px;
+    margin: 0px auto;
+}
+
+.main .container .choose {
+    border: 1px solid #e5e5e5;
+    padding: 0 20px;
+    margin: 40px 0;
+    font-size: 14px;
+    line-height: 30px;
+
+}
+
+
+.main .container .choose-item {
+    border-bottom: 1px dotted #ccc;
+    margin: 1em 0;
+}
+
+
+.main .container .noline {
+    border-bottom: none
+}
+
+
+.main .container .choose-item .left {
+    float: left;
+    width: 60px;
+    color: #999;
+    margin: 8px;
+}
+
+
+.main .container .choose-item .right {
+    float: right;
+    width: 1000px;
+}
+
+
+.main .container .choose-item .right .item {
+    float: left;
+    margin: 0 9px;
+    padding: 0 5px;
+}
+
+.main .container .choose-item .right a:hover {
+    color: #ef4238;
+}
+
+.main .container .choose-item .right li.select {
+    background-color: red;
+    color: #fff;
+    border-radius: 15%;
+}
+
+.main .container .choose-item .right li.select a:hover {
+    color: #fff;
+}
+
+.main .container .movie {
+    width: 1092px;
+    margin: 0 auto;
+}
+
+
+.main .container .movie .movie-item {
+    float: left;
+    margin: 10px 25px 10px 0;
+    width: 160px;
+}
+
+
+.main .container .movie .movie-item .movie-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 2px;
+
+}
+
+
+.main .container .movie .movie-item .movie-sorce {
+    text-align: center;
+    color: #ffb400;
+    font-style: italic;
+    line-height: 2;
+}
+
+
+.main .container .movie .movie-item .movie-sorce::first-letter {
+    font-size: 22px;
+}
+
+
+.main .container .movie .movie-item:nth-child(6n) {
+    margin: 10px 0 10px 0;
+}
+
+
+.main .container .movie .movie-item .movie-img img {
+    width: 160px;
+    height: 220px;
+}

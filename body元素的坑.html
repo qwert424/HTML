@@ -1,0 +1,185 @@
+<!-- 现象一：body没有宽度的时候 设置背景颜色 它会覆盖视口 如下代码： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+<!-- 原因：html元素 覆盖画布 ——画布 canves 即画布的宽度最小为视口宽度 画布的高度最小为视口高度 
+即当不设置html元素的背景时 body元素的背景覆盖画布 -->
+<!-- 现象二：当设置html背景时候 body元素的背景会正常 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: lightblue;
+        }
+
+        body {
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+<!-- 原因：当html有背景时 body元素正常 背景覆盖边框盒 -->
+
+<!-- 坑body设置背景要注意背景图和画布、视口之间的关系！！ -->
+
+<!-- 关系一：背景图的宽度百分比相对于视口 （背景颜色没关系 仍然覆盖画布）如下代码： -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html {
+            background-color: aliceblue;
+        } */
+
+        body {
+            background: url(./u=3294831775\,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp) no-repeat;
+            /* background-color: blue; */
+            background-size: 100%;
+            /* 画布宽度 */
+            width: 10000px;
+            height: 100px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+<!-- 关系二：背景图的高度百分比相对于网页高度 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(./u=3294831775\,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp) no-repeat;
+            /* background-color: blue; */
+            background-size: 100% 100%;
+            /* 画布宽度 */
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+<!-- 关系三：背景图的position位置在左右上相对于视口 而不是网页宽度 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html {
+            background-color: aliceblue;
+            height: 300px;
+        } */
+
+        body {
+            background: url(./u=3294831775\,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp) no-repeat;
+            /* background-color: blue; */
+            background-size: 100% 50%;
+            background-position: right top;
+            /* 画布宽度 */
+            width: 10000px;
+            height: 100px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+<!-- 关系四：背景图的position在高度上相对于网页高度 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html {
+            background-color: aliceblue;
+            height: 300px;
+        } */
+
+        body {
+            background: url(./u=3294831775\,3088717004&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto.webp) no-repeat;
+            /* background-color: blue; */
+            background-size: 100% 50%;
+            background-position: right center;
+            /* 画布宽度 */
+            width: 10000px;
+            height: 100px;
+            border: 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+<!-- 一般来说不会出现这个问题 因为网站的宽度一般不会超过视口 如果超过视口 就要知道背景图的宽度百分比和位置相对于视口而不是网站宽度 -->
+<!-- 在垂直方向相对于网站高度 -->

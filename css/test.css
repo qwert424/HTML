@@ -1,0 +1,76 @@
+/* 伪类选择器 */
+/* a:link {
+    color: blue;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: chartreuse;
+} */
+/* 属性选择器 */
+/* [href]{
+    color: blueviolet;
+} */
+/* 属性选择器 */
+/* [href="https://www.sina.com.cn/"] {
+    color: aqua;
+} */
+/* 通配符选择器 */
+/* * {
+    color: blue;
+} */
+/* 伪元素选择器 */
+/* span::before {
+    content: "《";
+    color: red
+}
+
+span::after {
+    content: "》";
+    color: red
+} */
+/* 后代元素 */
+/* div li {
+    color: blue;
+} */
+/* 子元素 */
+/* div>ul>li{
+    color: yellowgreen;
+} */
+/* 选中下一个兄弟 */
+/* .abc +li {
+    color: chocolate;
+} */
+
+/* 选中后面所有兄弟 */
+/* .abc~li {
+    color: chocolate;
+} */
+/* 选择器合并 */
+/* .abc {
+    color:yellowgreen;
+}
+p{
+    color: yellowgreen;
+}
+--->
+.abc,p{
+    color: yellowgreen;
+} */
+.abc {
+    background-color: yellowgreen;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    text-decoration: line-through;
+    line-height: 1.5;
+    text-indent: 2em;
+}

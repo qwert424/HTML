@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: aqua;
+            width: 500px;
+            height: 100px;
+            padding-left: 50px;
+            box-sizing: border-box;
+            background-clip: content-box;
+            overflow: scroll;
+            white-space: nowrap;
+            /* text-overflow: ellipsis; */
+            /* white-space: nowrap;不换行空白位置 */
+            /*  text-overflow: ellipsis;就是用原点显示。。。后面的 */
+            /* overflow-x: scroll */
+            /* overflow-y: scroll */
+
+        }
+
+        p,
+        span {
+            background-color: lightblue;
+            border: 2px solid red;
+            line-height: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 盒子类型：
+    块盒：独占一行 display显示为block的元素
+    行盒：不换行 dispaly显示为inline的元素
+    display默认值为 inline 且不可继承
+    默认的块盒元素为：容器元素（header、article、section、div、aside。。）、h1~h6、p
+    默认的行盒元素为（包含具体内容的元素）：span、a、img、video、audio、strong、em、i。。。
+    不管是 行盒还是块盒由内到外都由以下几个部分组成：内容、填充、边框、外边距
+    内容盒（content）也就是内容部分 属性：height、width
+    填充（内边距）也就是边框到内容的距离，padding，属性：padding-top、rigth、bottom、left（上右下左 顺时针方向）填充区+内容区=填充盒子
+    边框（border）边框=边框宽度（border-width）+边框样式（border-style）+边框颜色（border-color）；边框+填充区+内容区=边框盒子
+    外边距（margin）到其他盒子的距离 -->
+
+    <!-- 盒模型应用 -->
+    <!-- 改变宽高范围：宽高定义的是内容块，要定义边框块需要使用到box-sizing这个css样式 -->
+    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut architecto, harum aperiam autem possimus odit sunt
+        voluptatum sed debitis quam officia minima exercitationem aliquid necessitatibus a molestias blanditiis
+        voluptatem illo?</div>
+    <div>金卡舒服就好</div>
+
+    <!-- 改变背景范围：background-clip选择在哪个盒子 -->
+    <!-- 溢出用overflow -->
+    <!-- 断词规则：word-break，由break-all（英文会在单词截断），normal，keep-all（中文会一整段） -->
+    <!-- 空白处理：white-space：nowrap（作用相当于空白位置文字不换行）：pre就是相当于<pre>不取消空白。 -->
+
+    <!-- 行盒 ：包含具体内容的元素-->
+    <!-- 显著特点：盒子随着内容延申；不能设置宽高（特别在a元素使用容易犯错 设置width，要用padding！) -->
+
+    <!-- padding:内边距；border：边框；margin（外边距）：三者水平方向有效 垂直方向有效果但是不占据实际空间 -->
+
+    <!-- 行块盒：不独占一行 可以设置宽高 ,所以行快盒之间有空隙-->
+    <!-- 空白折叠发生在行盒内部和行盒之间 -->
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quibusdam maxime facere molestias laboriosam
+        veritatis ullam nihil, dicta dignissimos, magni labore error quo quos corporis officia consequuntur velit, quae
+        vitae!</P>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere ab possimus iste quas necessitatibus! Aliquid
+        perferendis numquam ipsa corporis deserunt distinctio aperiam, optio cum ducimus atque inventore vitae culpa
+        qui?</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quibusdam eveniet labore assumenda. Maiores
+        voluptates, praesentium hic, nulla voluptatum labore tempore laudantium ipsam, magni deleniti magnam soluta
+        eveniet! Magnam, cumque.</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nemo numquam natus adipisci quae autem
+        dolores inventore dolorem harum, quis consectetur distinctio pariatur, atque dignissimos quibusdam vitae
+        voluptatibus obcaecati. Eum.</span>
+
+
+    <!-- 可替换元素 和 非可替换元素 -->
+    <!-- 大部分元素 页面上显示的结果 取决于元素的内容 这叫做非可替换元素 如div p span a
+    小部分元素 页面上显示的内容 取决于元素的属性 这叫做可替换元素 img audio video 文本框 按钮等 
+    且绝大部分可替换元素均为行盒 可替换元素类似于行块盒，模型所有尺寸有效 如img 设置width、height有效果-->
+
+    <!-- object-fit：设置图案的一个css属性 fill默认值 cover填充满但是牺牲一部分内容 contain包含 就是不改变图片比例的填充-->
+
+    <img src="./../log-news.png" alt="">
+    <!-- img可替换元素 虽然是行盒 但是可设置宽高类似于行块盒 -->
+    <span>safadg</span>
+
+
+    <!-- 包含块（containning block）：每个盒子都有包含块，包含块确定盒子的排列布局 -->
+    <!-- 块盒的总宽度必须等于包含块的宽度 -->
+    <!-- width:auto就是剩下的空间由宽度吸收，且同时存在width：auto和margin：auto时，width比margin吸收更强 -->
+    <!-- 如果块盒的宽度不足内容块的宽度 则全由margin-right吸收 -->
+    <!-- margin-left：auto和margin-reght：auto吸收能力一样 -->
+    <!-- 在常规流中，如果需要做一个块盒在内容块中居中 则可以将块盒定宽，然后设置margin-left和margin-right为auto，或者margin：0 auto； -->
+    <!-- 垂直方向上的margin值设置为auto则为0 ；height：auto 为：适应内容高度-->
+    <!-- 百分比取值：
+        1、宽度、padding、margin的百分比值的参考对象是包含块的宽度 （只和宽度有关！即margin-top：50% 参考对象不是高度的50% 而是宽度的50%
+        2、高度的百分比：
+            当包含块的高度取决于子元素的高度时，子元素设置高度百分比无效
+            当包含快的高度不取决于子元素的高度时，子元素设置高度百分比相对于父元素的高度   -->
+    <!-- 上下外边距的合并： -->
+    <!-- 当两个常规流块盒，上下外边距（margin）相邻!!!!，就会合并!!!，且取值为两者margin最大值
+    这两个常规流不只是兄弟块，父子块也可以，只要相邻就会合并 解决办法（只要不相邻就可以 如加border、不加边框的话父类的padding可以作为子类的margin-top）
+    -->
+</body>
+
+</html>
